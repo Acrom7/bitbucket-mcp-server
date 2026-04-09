@@ -166,7 +166,7 @@ export const toolDefinitions: ToolDefinition[] = [
         repository: R,
         pull_request_id: PRID,
         comment_text: { type: 'string', description: 'Comment text. For suggestions, this is the explanation before the code block.' },
-        parent_comment_id: { type: 'number', description: 'Comment ID to reply to (optional)' },
+        parent_comment_id: { type: 'number', description: 'ID of an existing comment to reply to. ONLY provide this when creating a threaded reply to an existing comment. For a new top-level comment, omit this field entirely (do not send 0 or null as a placeholder).' },
         file_path: { type: 'string', description: 'File path for inline comment, e.g. "src/index.ts" (optional)' },
         line_number: { type: 'number', description: 'Line number in the file. Use with file_path. Provide this OR code_snippet (optional)' },
         line_type: {
